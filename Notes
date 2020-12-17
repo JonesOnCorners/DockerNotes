@@ -30,6 +30,25 @@ docker container log <name of container>
 docker container rm <container ids separated by commas>
 
 
+****Docker container inspect and check stats****
+docker container top (shows process list in one container)
+docker container inspect
+docker container stats
+
+
+****interactively login to a container****
+docker container run -it --name  ubuntu ubuntu (this will actually log you into ubuntu machine)
+
+****start a container which has been stopped****
+
+docker container start -ai <containername> 
+
+docker container run -it <containername> (start a new container interactively)  
+
+docker container exec -it <containername> 
+docker container exec -it <containername> (run additional commands in an existing container)
+
+
 
 
 
