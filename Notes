@@ -1,0 +1,36 @@
+Image = Application we want to run. For example NGNIX or LINUX OS etc
+Container = Instance of the image running as a process.
+
+****Basic Command****
+This command will check if the NGINX image exists locally, if it does will run it, if not it will pull it from docker hub and run it on the port 80
+
+docker container run --publish 80:80 nginx
+
+docker container run --publish 80:80 --detach nginx (the --detach flag will run the process in the background)
+
+****List running container****
+
+docker container ls
+
+docker container ls -a (list of running as well as deactivated containers)
+
+
+****stop running containers****
+
+docker container stop <containerid(available as output of ls command)>
+
+By default each container is assigned a default name. To give a name to container you can use the --name flag while starting it
+
+docker container run --publish 80:80 --detach --name <anyname> nginx
+
+docker container log <name of container>
+
+****REMOVE CONTAINER****
+
+docker container rm <container ids separated by commas>
+
+
+
+
+
+
