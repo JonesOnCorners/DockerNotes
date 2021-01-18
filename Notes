@@ -48,6 +48,15 @@ docker container run -it <containername> (start a new container interactively)
 docker container exec -it <containername> 
 docker container exec -it <containername> (run additional commands in an existing container)
 
+****DOCKER IMAGE TAGS****
+They are just like versions where latest corresponds to the latest available stable version. We can also tag an image and reupload it.
+
+docker pull nginx:latet (latest is the tag here)
+
+docker image tag nginx jaydeepkarale/nginx:mytest (tage the nginx with a new tag mytest).
+
+These essentially are the same images and will have the same image id.
+
 
 
 
