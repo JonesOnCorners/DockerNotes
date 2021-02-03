@@ -57,6 +57,27 @@ docker image tag nginx jaydeepkarale/nginx:mytest (tage the nginx with a new tag
 
 These essentially are the same images and will have the same image id.
 
+****PERSISTENT DATA: VOLUMES****
+
+Can be used when we need to persist i.e. store data
+
+docker container run -d --name mysql -e MYSQL_ALLOW_EMPTY_PASSWORD=True -v mysql-db:/var/lib/mysql
+
+docker volume ls
+
+volumes need to be deleted manually.
+
+"docker volume create"  can be used to create volumes beforehand i.e. before running a container.
+
+****PERSISTENT DATA: BIND MOUNT****
+
+This is used to link a drive on the host to the container
+
+docker container run -d --name somename -p 80:80  -v $(pwd):/site imagename
+
+here the container will see changes on the host and incorporate those changes in the container. 
+So, if you are running a Django application and need to change code, then you can make changes in the code at $(pwd) and the running container imagename will
+see those changes and reload the container.
 
 
 
